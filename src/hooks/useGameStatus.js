@@ -11,7 +11,7 @@ export const useGameStatus = rowsCleared => {
     // Tem ponto?
     if(rowsCleared > 0){
       //é assim que o jogo original do tetris é calculado
-      setScore(prev => prev + linePoints[rowsCleared -1 * (level + 1)]);
+      setScore(prev => prev + linePoints[rowsCleared -1] * (level + 1));
       setRows(prev => prev + rowsCleared);
     }
   }, [level, linePoints, rowsCleared]);
